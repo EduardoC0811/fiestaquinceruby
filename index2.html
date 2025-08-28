@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XV Años - Invitación</title>
+    <!-- Conexión con el archivo CSS -->
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    
+    <!-- ===================== HEADER ===================== -->
+    <!-- Espacio para el nombre y foto principal de la quinceañera -->
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Foto principal de la quinceañera -->
+            
+            <!-- Nombre de la quinceañera -->
+            <h1 class="nombre">Yasmin Ruby</h1>
+            <h4 class="subtitulo">Mis XV Años</h4>
+            <h5 class="fecha">4 de Octubre</h5>
+        </div>
+    </header>
+
+    <section class="parallax">
+        <h3>“Que el Señor ilumine tu camino y te llene de paz, alegría y fe mientras comienzas esta nueva etapa de tu vida.”</h3>
+    </section>
+
+        <!-- ===== TEMPORIZADOR ELEGANTE ===== -->
+    <section id="temporizador" class="seccion">
+        <!-- Imagen de título -->
+        <div class="titulo-imagen">
+            <img src="Faltan.png" alt="Título del Evento">
+        </div>
+        <div class="contador">
+            <div class="tiempo">
+                <span id="dias">00</span>
+                <small>Días</small>
+            </div>
+            <div class="tiempo">
+                <span id="horas">00</span>
+                <small>Horas</small>
+            </div>
+            <div class="tiempo">
+                <span id="minutos">00</span>
+                <small>Minutos</small>
+            </div>
+            <div class="tiempo">
+                <span id="segundos">00</span>
+                <small>Segundos</small>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+    // ===== SCRIPT PARA ACTUALIZAR EL TEMPORIZADOR ===== //
+    const fechaEvento = new Date("Octubre 04, 2025 16:00:00").getTime();
+
+    const cuentaAtras = setInterval(() => {
+        const ahora = new Date().getTime();
+        const diferencia = fechaEvento - ahora;
+
+        if (diferencia < 0) {
+            clearInterval(cuentaAtras);
+            document.getElementById("temporizador").innerHTML = "<h2>¡El gran día ha llegado!</h2>";
+            return;
+        }
+
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById("dias").textContent = dias.toString().padStart(2, '0');
+        document.getElementById("horas").textContent = horas.toString().padStart(2, '0');
+        document.getElementById("minutos").textContent = minutos.toString().padStart(2, '0');
+        document.getElementById("segundos").textContent = segundos.toString().padStart(2, '0');
+    }, 1000);
+    </script>
+
+   <!-- ===== CARRUSEL DE IMÁGENES ===== -->
+    <section id="carrusel" class="seccion fade-in">
+        <div class="contenedor-carrusel">
+            <div class="slide">
+                <img src="pluma.jpg" alt="Foto 1">
+            </div>
+            <div class="slide">
+                <img src="pajaro.jpg" alt="Foto 2">
+            </div>
+            <div class="slide">
+                <img src="sentadacascada.jpg" alt="Foto 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== INFORMACIÓN DE LA MISA ===================== -->
+    <section class="misa">
+        <h2>Ceremonia de Acción de Gracias</h2>
+        <h4>Imperial Banquet Hall</h4>
+        
+        <!-- Imagen del lugar -->
+        <img src="palapa.jpg" alt="Iglesia" class="imagen-lugar">
+
+        <!-- Botón Bezel que redirige a Google Maps -->
+         <div style="text-align: center;">
+            <a href="https://maps.app.goo.gl/ihiF2zYW5QmRcftb8" target="_blank" class="btn-bezel">
+                Ver en Google Maps
+            </a>
+        </div>
+
+    </section>
+
+<section class="parallax2"></section>
+
+     <!-- ===================== ITINERARIO ===================== -->
+    <section class="itinerario">
+        <img src="itinerario.png"alt="Imagen de itinerario">
+    </section>
+
+    <!-- ===== CARRUSEL DE IMÁGENES ===== -->
+    <section id="carrusel" class="seccion fade-in">
+        <div class="contenedor-carrusel">
+            <div class="slide">
+                <img src="bebenaranja.jpg" alt="Foto 1">
+            </div>
+            <div class="slide">
+                <img src="blanco.jpg" alt="Foto 2">
+            </div>
+            <div class="slide">
+                <img src="beberojo.jpg" alt="Foto 3">
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- ===================== CONFIRMACIÓN DE ASISTENCIA ===================== -->
+    <section id="formulario-asistencia" class="seccion">
+        <h2>Confirmar Asistencia</h2>
+        <form id="confirmacion" action="#" method="post">
+            
+            <!-- Campo Nombre -->
+            <div class="campo-formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
+            </div>
+
+            <!-- Campo Apellidos -->
+            <div class="campo-formulario">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos" required>
+            </div>
+
+            <!-- Confirmación de asistencia -->
+            <div class="campo-formulario">
+                <label>
+                    <input type="checkbox" id="asistencia" name="asistencia" required>
+                    Confirmo mi asistencia
+                </label>
+            </div>
+
+            <!-- Botón de envío -->
+            <div class="campo-formulario">
+                <button type="submit">Enviar Confirmación</button>
+            </div>
+
+        </form>
+    </section>
+
+    <!-- ===================== SCRIPT FORMULARIO ===================== -->
+        <script>
+            document.getElementById('confirmacion').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Valores del formulario
+                let nombre = document.getElementById('nombre').value;
+                let apellidos = document.getElementById('apellidos').value;
+
+                // Datos del teléfono
+                let codigoPais = "52";          // Ejemplo: 1 = EE. UU., 52 = México
+                let numeroLocal = "8994147020"; // Número sin signos ni espacios
+                let numeroCompleto = codigoPais + numeroLocal;
+
+                // Mensaje que se enviará
+                let mensaje = `Hola, soy ${nombre} ${apellidos}. Confirmo mi asistencia a la fiesta de 15 años.`;
+
+                // Abrir WhatsApp
+                window.open(`https://wa.me/${numeroCompleto}?text=${encodeURIComponent(mensaje)}`, '_blank');
+            });
+        </script>
+
+
+        <!-- ===== MÚSICA AUTOMÁTICA EN LA INVITACIÓN ===== -->
+        <div class="player-musica">
+            <audio id="musica-fondo" autoplay loop>
+                <source src="musica.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio HTML5.
+            </audio>
+            <button id="toggleMusica">⏸ Reanudar Música</button>
+        </div>
+
+    <script>
+        // Controlar el botón de pausar/reanudar
+        const musica = document.getElementById("musica-fondo");
+        const boton = document.getElementById("toggleMusica");
+
+        boton.addEventListener("click", () => {
+            if (musica.paused) {
+                musica.play();
+                boton.textContent = "⏸ Pausar Música";
+            } else {
+                musica.pause();
+                boton.textContent = "▶ Reanudar Música";
+            }
+        });
+    </script>
+
+    <!-- ===================== FOOTER ===================== -->
+        <footer>
+            <p>Con mucho cariño, te espero en mis XV años 💙</p>
+        </footer>
+        
+</body>
+</html>
