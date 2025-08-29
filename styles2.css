@@ -138,6 +138,12 @@ h5 {
   align-items: center;
 }
 
+.content {
+  height: 200vh; /* Simula scroll */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* ===================== SECCIONES GENERALES ===================== */
 section {
@@ -499,6 +505,7 @@ footer {
 .player-musica button:hover {
     text-decoration: underline;
 }
+
 
 
 
