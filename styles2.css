@@ -138,11 +138,11 @@ h5 {
   align-items: center;
 }
 
-.content {
-  height: 200vh; /* Simula scroll */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Detecta iOS y elimina el fixed */
+@supports (-webkit-touch-callout: none) {
+  .parallax {
+    background-attachment: scroll; /* 🔹 fallback en iOS */
+    }
 }
 
 /* ===================== SECCIONES GENERALES ===================== */
@@ -505,6 +505,7 @@ footer {
 .player-musica button:hover {
     text-decoration: underline;
 }
+
 
 
 
