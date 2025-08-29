@@ -44,7 +44,7 @@ h2 {
     font-family: 'TCBenguiatStdMediumC';
     font-weight: normal;
     font-size: 230%;
-    color: #FFD700;
+    color: #bd8c1c;
     text-align: center;
 }
 
@@ -222,7 +222,7 @@ section {
     font-size: 1.1em;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(145deg, #111B41, #111B41);
+    background: linear-gradient(145deg, #bd8c1c, #49370c);
     border: none;
     border-radius: 12px;
     text-decoration: none;
@@ -292,7 +292,7 @@ section {
     max-width: 120px;
     min-width: 60px;
     box-shadow: 0 0 50px #000000;
-    border: 2px solid #FFD700;
+    border: 2px solid #bd8c1c;
     text-align: center;
 }
 
@@ -393,6 +393,15 @@ section {
     }
 }
 
+.misa p {
+    font-family: 'TCBenguiatStdMediumC';
+    text-align: center;
+    font-size: 110%;
+    color: #ffffff; /* Azul rey */
+    margin-bottom: 70px;
+}
+
+
 /* ===================== ITINERARIO================= */
 
 .itinerario {
@@ -413,6 +422,16 @@ section {
 }
 
 
+/* ===================== VESTIMENTA ===================== */
+
+.vestimenta h4 {
+    font-family: 'Great Vibes';
+    text-align: center;
+    font-size: 180%;
+    color: #ffffff; /* Azul rey */
+    margin-bottom: 70px;
+}
+
 /* ===================== CONFIRMACIÓN ===================== */
 
 #formulario-asistencia h2 {
@@ -429,7 +448,7 @@ section {
     font-size: 1.1em;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(145deg, #111B41, #111B41);
+    background: linear-gradient(145deg, #bd8c1c, #49370c);
     border: none;
     border-radius: 12px;
     text-decoration: none;
