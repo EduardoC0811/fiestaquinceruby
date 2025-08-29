@@ -140,7 +140,7 @@ h5 {
 
 /* Detecta iOS y elimina el fixed */
 @supports (-webkit-touch-callout: none) {
-  .parallax {
+  .parallax .parallax2 {
     background-attachment: scroll; /* 🔹 fallback en iOS */
     }
 }
@@ -505,6 +505,7 @@ footer {
 .player-musica button:hover {
     text-decoration: underline;
 }
+
 
 
 
