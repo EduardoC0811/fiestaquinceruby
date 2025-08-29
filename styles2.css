@@ -423,7 +423,7 @@ section {
 }
 
 .campo-formulario button {
-    display: block;   /* Se ajusta al texto */
+    display: flex;   /* Se ajusta al texto */
     margin: 0 auto;
     padding: 12px 24px;      /* Espacio interno alrededor del texto */
     font-size: 1.1em;
@@ -438,6 +438,9 @@ section {
         inset -2px -2px 4px rgba(0, 0, 0, 0.5),
         4px 4px 8px rgba(0, 0, 0, 0.4);
     transition: all 0.2s ease-in-out;
+    align-items: center; /* Centra el ícono y el texto verticalmente */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    gap: 8px; 
 }
 
 .campo-formulario button:hover {
