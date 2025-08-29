@@ -100,7 +100,7 @@
         <h4>Imperial Banquet Hall</h4>
         
         <!-- Imagen del lugar -->
-        <img src="salon.jpg" alt="Iglesia" class="imagen-lugar">
+        <img src="salon.jpg" alt="Ceremonia" class="imagen-lugar">
 
         <!-- Botón Bezel que redirige a Google Maps -->
          <div style="text-align: center;">
@@ -141,56 +141,22 @@
     <!-- ===================== CONFIRMACIÓN DE ASISTENCIA ===================== -->
     <section id="formulario-asistencia" class="seccion">
         <h2>Confirmar Asistencia</h2>
-        <form id="confirmacion" action="#" method="post">
-            
-            <!-- Campo Nombre -->
-            <div class="campo-formulario">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>
-            </div>
-
-            <!-- Campo Apellidos -->
-            <div class="campo-formulario">
-                <label for="apellidos">Apellidos:</label>
-                <input type="text" id="apellidos" name="apellidos" placeholder="Ingresa tus apellidos" required>
-            </div>
-
-            <!-- Confirmación de asistencia -->
-            <div class="campo-formulario">
-                <label>
-                    <input type="checkbox" id="asistencia" name="asistencia" required>
-                    Confirmo mi asistencia
-                </label>
-            </div>
+            <h6>¡Contaremos contigo en este día tan importante para nosotros! Así que, por favor, 
+                confírmanos para cerrar la lista de invitados y confirmar lo que ya sabemos: ¡vienes seguro!</h6>
 
             <!-- Botón de envío -->
             <div class="campo-formulario">
-                <button type="submit">Enviar Confirmación</button>
+                <button onclick="openWhatsApp()">Abrir WhatsApp</button>
             </div>
-
-        </form>
     </section>
 
     <!-- ===================== SCRIPT FORMULARIO ===================== -->
         <script>
-            document.getElementById('confirmacion').addEventListener('submit', function(e) {
-                e.preventDefault();
-
-                // Valores del formulario
-                let nombre = document.getElementById('nombre').value;
-                let apellidos = document.getElementById('apellidos').value;
-
-                // Datos del teléfono
-                let codigoPais = "52";          // Ejemplo: 1 = EE. UU., 52 = México
-                let numeroLocal = "8994147020"; // Número sin signos ni espacios
-                let numeroCompleto = codigoPais + numeroLocal;
-
-                // Mensaje que se enviará
-                let mensaje = `Hola, soy ${nombre} ${apellidos}. Confirmo mi asistencia a la fiesta de 15 años.`;
-
-                // Abrir WhatsApp
-                window.open(`https://wa.me/${numeroCompleto}?text=${encodeURIComponent(mensaje)}`, '_blank');
-            });
+            function openWhatsApp() {
+            const phoneNumber = "528994147020"; // Número de teléfono con código de país.
+            const url = `https://wa.me/${phoneNumber}`;
+            window.open(url, '_blank');
+            }
         </script>
 
 
@@ -220,15 +186,9 @@
     </script>
 
     <!-- ===================== FOOTER ===================== -->
-        <footer>
-            <p>Con mucho cariño, te espero en mis XV años 💙</p>
-        </footer>
+    <footer>
+        <img src="footer.png" alt="Descripción de la imagen del footer" class="footer-img">
+    </footer>
         
 </body>
 </html>
-
-
-
-
-
-
