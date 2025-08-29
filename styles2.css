@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    background-color: #2D4254;
+    background-color: #111B41;
     color: #333;
 }
 
@@ -213,7 +213,7 @@ section {
     font-size: 1.1em;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(145deg, #2D4254, #2D4254);
+    background: linear-gradient(145deg, #111B41, #111B41);
     border: none;
     border-radius: 12px;
     text-decoration: none;
@@ -226,7 +226,7 @@ section {
 
 
 .btn-bezel:hover {
-    background: linear-gradient(145deg, #2D4254, #1f2c37);
+    background: linear-gradient(145deg, #111B41, #1f2c37);
     box-shadow: 
         inset 1px 1px 2px rgba(255, 255, 255, 0.4),
         inset -1px -1px 2px rgba(0, 0, 0, 0.5),
@@ -249,7 +249,7 @@ section {
 #temporizador {
     background-image: url('fondopavoreal.jpg');
     background-position: center;
-    background-color: #2D4254;
+    background-color: #111B41;
     text-align: center;
     font-family: 'Raleway', sans-serif;
     padding: 200px 20px;
@@ -454,7 +454,7 @@ section {
 }
 
 .campo-formulario button {
-    background-color: #2D4254;
+    background-color: #111B41;
     color: #ffffff;
     padding: 12px;
     border: none;
@@ -481,7 +481,7 @@ section {
 
 /* ===================== FOOTER ===================== */
 footer {
-    background-color: #2D4254;
+    background-color: #111B41;
     color: white;
     text-align: center;
     padding: 20px;
@@ -493,7 +493,7 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #2D4254; /* Color #24329e con transparencia */
+    background-color: #111B41; /* Color #24329e con transparencia */
     padding: 10px 15px;
     border-radius: 30px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -512,6 +512,7 @@ footer {
 .player-musica button:hover {
     text-decoration: underline;
 }
+
 
 
 
