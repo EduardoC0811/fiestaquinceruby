@@ -140,7 +140,7 @@ h5 {
 
 /* Detecta iOS y elimina el fixed */
 @supports (-webkit-touch-callout: none) {
-  .parallax .parallax2 {
+  .parallax {
     background-attachment: scroll; /* 🔹 fallback en iOS */
     }
 }
@@ -377,6 +377,14 @@ section {
   align-items: center;
 }
 
+/* Detecta iOS y elimina el fixed */
+@supports (-webkit-touch-callout: none) {
+  .parallax2 {
+    background-attachment: scroll; /* 🔹 fallback en iOS */
+    }
+}
+
+
 /* ===================== ITINERARIO================= */
 
 .itinerario {
@@ -505,6 +513,7 @@ footer {
 .player-musica button:hover {
     text-decoration: underline;
 }
+
 
 
 
