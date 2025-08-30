@@ -484,6 +484,29 @@ section {
     background-color: #24329e;
 }
 
+/* ===================== COLLAGE ===================== */
+
+.parallax3 {
+  background-image: url('collage.png'); /* 🔹 Cambia por tu imagen */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  background-attachment: fixed; /* Efecto parallax */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Opcional: centrar contenido si luego agregas texto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Detecta iOS y elimina el fixed */
+@supports (-webkit-touch-callout: none) {
+  .parallax3 {
+    background-attachment: scroll; /* 🔹 fallback en iOS */
+    }
+}
+
 /* ===================== FOOTER ===================== */
 footer {
     text-align: center;
