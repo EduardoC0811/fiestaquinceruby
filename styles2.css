@@ -82,7 +82,7 @@ h6 {
 
 /* ===================== HEADER / PORTADA ===================== */
 .hero {
-    background-image: url('pluma2.jpg');
+    background-image: url('pluma2.png');
     height: 100vh; /* Ocupa toda la altura de la ventana */
     background-position: center;
     background-size: cover;   /* Hace que la imagen cubra toda la pantalla */
@@ -132,7 +132,7 @@ h6 {
 .parallax {
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* 🔹 Capa oscura */
-    url('lago.jpg'); /* 🔹 Cambia por tu imagen */
+    url('lago.png'); /* 🔹 Cambia por tu imagen */
   height: 100vh; /* Ocupa toda la altura de la pantalla */
   
   background-attachment: fixed; /* Efecto parallax */
