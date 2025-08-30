@@ -162,6 +162,15 @@ section {
 }
 
 /* ===== CARRUSEL ===== */
+
+#carrusel p {
+    font-family: 'TCBenguiatStdMediumC';
+    text-align: center;
+    font-size: 180%;
+    color: #ffffff; /* Azul rey */
+    margin-bottom: 40px;
+}
+
 .contenedor-carrusel {
     position: relative;
     max-width: 400px;
